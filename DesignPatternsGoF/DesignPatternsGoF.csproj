@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="01 - Creational Patterns\01 - Abstract Factory\" />
+    <Folder Include="01 - Creational Patterns\02 - Builder\" />
+    <Folder Include="01 - Creational Patterns\03 - Factory Method\" />
+    <Folder Include="01 - Creational Patterns\04 - Prototype\" />
+    <Folder Include="01 - Creational Patterns\05 - Singleton\" />
+    <Folder Include="02 - Structural Patterns\01 - Adapter\" />
+    <Folder Include="02 - Structural Patterns\02 - Bridge\" />
+    <Folder Include="02 - Structural Patterns\03 - Composite\" />
+    <Folder Include="02 - Structural Patterns\04 - Decorator\" />
+    <Folder Include="02 - Structural Patterns\05 - Façade\" />
+    <Folder Include="02 - Structural Patterns\06 - Flyweight\" />
+    <Folder Include="02 - Structural Patterns\07 - Proxy\" />
+    <Folder Include="03 - Behavioral Patterns\01 - Chain of Responsibility\" />
+    <Folder Include="03 - Behavioral Patterns\02 - Command\" />
+    <Folder Include="03 - Behavioral Patterns\03 - Interpreter\" />
+    <Folder Include="03 - Behavioral Patterns\04 - Iterator\" />
+    <Folder Include="03 - Behavioral Patterns\05 - Mediator\" />
+    <Folder Include="03 - Behavioral Patterns\06 - Memento\" />
+    <Folder Include="03 - Behavioral Patterns\07 - Observer\" />
+    <Folder Include="03 - Behavioral Patterns\08 - State\" />
+    <Folder Include="03 - Behavioral Patterns\09 - Strategy\" />
+    <Folder Include="03 - Behavioral Patterns\10 - Template Method\" />
+    <Folder Include="03 - Behavioral Patterns\11 - Visitor\" />
+  </ItemGroup>
+
+</Project>

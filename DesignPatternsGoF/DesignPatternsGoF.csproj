@@ -13,4 +13,10 @@
     <None Remove="01 - Creational Patterns\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="01 - Creational\03 - Factory Method\" />
+    <Folder Include="01 - Creational\04 - Prototype\" />
+    <Folder Include="01 - Creational\05 - Singleton\" />
+  </ItemGroup>
+
 </Project>

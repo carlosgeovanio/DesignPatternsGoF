@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,15 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="01 - Creational Patterns\**" />
-    <EmbeddedResource Remove="01 - Creational Patterns\**" />
-    <None Remove="01 - Creational Patterns\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="01 - Creational\03 - Factory Method\" />
-    <Folder Include="01 - Creational\04 - Prototype\" />
-    <Folder Include="01 - Creational\05 - Singleton\" />
+    <Folder Include="Creational\Factory Method\" />
+    <Folder Include="Creational\Prototype\" />
+    <Folder Include="Creational\Singleton\" />
   </ItemGroup>
 
 </Project>

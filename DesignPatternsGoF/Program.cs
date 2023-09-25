@@ -36,13 +36,30 @@
 #endregion
 
 #region Factory Method
-using DesignPatternsGoF.Creational.FactoryMethod;
+//using DesignPatternsGoF.Creational.FactoryMethod;
 
-string filePath = "path/to/file.json";
-string fileType = "json";  // Could be "xml" or "csv" as well
+//string filePath = "path/to/file.json";
+//string fileType = "json";  // Could be "xml" or "csv" as well
 
-IFileParser parser = FileParserFactory.CreateFileParser(fileType);
-parser.ParseFile(filePath);
+//IFileParser parser = FileParserFactory.CreateFileParser(fileType);
+//parser.ParseFile(filePath);
 #endregion
 
+#region Prototype
+using DesignPatternsGoF.Creational.Prototype;
+
+var configurationManager = new ConfigManager();
+
+Console.WriteLine("Configuração para Desenvolvimento:");
+var devConfig = configurationManager.GetConfiguration("development");
+Console.WriteLine($"App Name: {devConfig.AppName}, Connection String: {devConfig.DatabaseConnectionString}");
+
+Console.WriteLine("\nConfiguração para Teste:");
+var testConfig = configurationManager.GetConfiguration("test");
+Console.WriteLine($"App Name: {testConfig.AppName}, Connection String: {testConfig.DatabaseConnectionString}");
+
+Console.WriteLine("\nConfiguração para Produção:");
+var prodConfig = configurationManager.GetConfiguration("production");
+Console.WriteLine($"App Name: {prodConfig.AppName}, Connection String: {prodConfig.DatabaseConnectionString}");
+#endregion
 #endregion Creational Patterns

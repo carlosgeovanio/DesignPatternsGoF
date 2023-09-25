@@ -8,11 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Creational\Abstract Factory\" />
     <Folder Include="Creational\Builder\" />
     <Folder Include="Creational\Factory Method\" />
     <Folder Include="Creational\Prototype\" />
     <Folder Include="Creational\Singleton\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
 </Project>

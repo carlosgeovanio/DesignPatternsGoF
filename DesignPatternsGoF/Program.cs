@@ -46,20 +46,28 @@
 #endregion
 
 #region Prototype
-using DesignPatternsGoF.Creational.Prototype;
+//using DesignPatternsGoF.Creational.Prototype;
 
-var configurationManager = new ConfigManager();
+//var configurationManager = new ConfigManager();
 
-Console.WriteLine("Configuração para Desenvolvimento:");
-var devConfig = configurationManager.GetConfiguration("development");
-Console.WriteLine($"App Name: {devConfig.AppName}, Connection String: {devConfig.DatabaseConnectionString}");
+//Console.WriteLine("Configuração para Desenvolvimento:");
+//var devConfig = configurationManager.GetConfiguration("development");
+//Console.WriteLine($"App Name: {devConfig.AppName}, Connection String: {devConfig.DatabaseConnectionString}");
 
-Console.WriteLine("\nConfiguração para Teste:");
-var testConfig = configurationManager.GetConfiguration("test");
-Console.WriteLine($"App Name: {testConfig.AppName}, Connection String: {testConfig.DatabaseConnectionString}");
+//Console.WriteLine("\nConfiguração para Teste:");
+//var testConfig = configurationManager.GetConfiguration("test");
+//Console.WriteLine($"App Name: {testConfig.AppName}, Connection String: {testConfig.DatabaseConnectionString}");
 
-Console.WriteLine("\nConfiguração para Produção:");
-var prodConfig = configurationManager.GetConfiguration("production");
-Console.WriteLine($"App Name: {prodConfig.AppName}, Connection String: {prodConfig.DatabaseConnectionString}");
+//Console.WriteLine("\nConfiguração para Produção:");
+//var prodConfig = configurationManager.GetConfiguration("production");
+//Console.WriteLine($"App Name: {prodConfig.AppName}, Connection String: {prodConfig.DatabaseConnectionString}");
+#endregion
+
+#region Singleton
+// Exemplo de uso
+using DesignPatternsGoF.Creational.Singleton;
+
+Order order = new Order();
+order.PlaceOrder("ProdutoA", 5);
 #endregion
 #endregion Creational Patterns

@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Creational\Abstract Factory\" />
+    <Folder Include="Creational\Builder\" />
     <Folder Include="Creational\Factory Method\" />
     <Folder Include="Creational\Prototype\" />
     <Folder Include="Creational\Singleton\" />

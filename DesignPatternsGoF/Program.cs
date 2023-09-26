@@ -64,10 +64,55 @@
 #endregion
 
 #region Singleton
-// Exemplo de uso
-using DesignPatternsGoF.Creational.Singleton;
+//using DesignPatternsGoF.Creational.Singleton;
 
-Order order = new Order();
-order.PlaceOrder("ProdutoA", 5);
+//Order order = new Order();
+//order.PlaceOrder("ProdutoA", 5);
 #endregion
+
 #endregion Creational Patterns
+
+#region Behavioral Patterns
+
+#region Chain of Responsibility
+using DesignPatternsGoF.Behavioral.ChainOfResponsibility;
+
+var request1 = new AuthenticationRequest
+{
+    Token = "abc123"
+};
+
+var request2 = new AuthenticationRequest
+{
+    UserName = "john_doe",
+    Password = "password123"
+};
+
+var request3 = new AuthenticationRequest
+{
+    IsBiometricAuthenticated = true
+};
+
+AuthenticationHandler tokenHandler = new TokenAuthenticationHandler();
+AuthenticationHandler usernamePasswordHandler = new UsernamePasswordAuthenticationHandler();
+AuthenticationHandler biometricHandler = new BiometricAuthenticationHandler();
+
+tokenHandler.SetNext(usernamePasswordHandler);
+usernamePasswordHandler.SetNext(biometricHandler);
+
+Console.WriteLine("Authenticating request1:");
+bool result1 = tokenHandler.Authenticate(request1);
+Console.WriteLine("Authentication result for request1: " + result1);
+Console.WriteLine();
+
+Console.WriteLine("Authenticating request2:");
+bool result2 = tokenHandler.Authenticate(request2);
+Console.WriteLine("Authentication result for request2: " + result2);
+Console.WriteLine();
+
+Console.WriteLine("Authenticating request3:");
+bool result3 = tokenHandler.Authenticate(request3);
+Console.WriteLine("Authentication result for request3: " + result3);
+#endregion
+
+#endregion Behavioral Patterns

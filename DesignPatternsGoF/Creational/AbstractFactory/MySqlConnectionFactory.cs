@@ -6,15 +6,15 @@ namespace DesignPatternsGoF.Creational.AbstractFactory
     // Concrete implementation for connecting to MySQL
     public class MySqlConnectionFactory : IDbConnectionFactory
     {
-        private string _connectionString;
+        private string connectionString;
         public MySqlConnectionFactory(string connectionString)
         {
-            _connectionString = connectionString;
+            this.connectionString = connectionString;
         }
 
         public IDbConnection CreateConnection()
         {
-            return new MySqlConnection(_connectionString);
+            return new MySqlConnection(connectionString);
         }
     }
 }

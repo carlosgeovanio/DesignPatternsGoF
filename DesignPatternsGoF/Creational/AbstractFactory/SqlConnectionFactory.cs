@@ -6,15 +6,15 @@ namespace DesignPatternsGoF.Creational.AbstractFactory
     // Concrete implementation for connecting to SQL Server
     public class SqlConnectionFactory : IDbConnectionFactory
     {
-        private string _connectionString;
+        private string connectionString;
         public SqlConnectionFactory(string connectionString)
         {
-            _connectionString = connectionString;
+            this.connectionString = connectionString;
         }
 
         public IDbConnection CreateConnection()
         {
-            return new SqlConnection(_connectionString);
+            return new SqlConnection(connectionString);
         }
     }
 }

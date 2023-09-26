@@ -75,44 +75,60 @@
 #region Behavioral Patterns
 
 #region Chain of Responsibility
-using DesignPatternsGoF.Behavioral.ChainOfResponsibility;
+//using DesignPatternsGoF.Behavioral.ChainOfResponsibility;
 
-var request1 = new AuthenticationRequest
-{
-    Token = "abc123"
-};
+//var request1 = new AuthenticationRequest
+//{
+//    Token = "abc123"
+//};
 
-var request2 = new AuthenticationRequest
-{
-    UserName = "john_doe",
-    Password = "password123"
-};
+//var request2 = new AuthenticationRequest
+//{
+//    UserName = "john_doe",
+//    Password = "password123"
+//};
 
-var request3 = new AuthenticationRequest
-{
-    IsBiometricAuthenticated = true
-};
+//var request3 = new AuthenticationRequest
+//{
+//    IsBiometricAuthenticated = true
+//};
 
-AuthenticationHandler tokenHandler = new TokenAuthenticationHandler();
-AuthenticationHandler usernamePasswordHandler = new UsernamePasswordAuthenticationHandler();
-AuthenticationHandler biometricHandler = new BiometricAuthenticationHandler();
+//AuthenticationHandler tokenHandler = new TokenAuthenticationHandler();
+//AuthenticationHandler usernamePasswordHandler = new UsernamePasswordAuthenticationHandler();
+//AuthenticationHandler biometricHandler = new BiometricAuthenticationHandler();
 
-tokenHandler.SetNext(usernamePasswordHandler);
-usernamePasswordHandler.SetNext(biometricHandler);
+//tokenHandler.SetNext(usernamePasswordHandler);
+//usernamePasswordHandler.SetNext(biometricHandler);
 
-Console.WriteLine("Authenticating request1:");
-bool result1 = tokenHandler.Authenticate(request1);
-Console.WriteLine("Authentication result for request1: " + result1);
-Console.WriteLine();
+//Console.WriteLine("Authenticating request1:");
+//bool result1 = tokenHandler.Authenticate(request1);
+//Console.WriteLine("Authentication result for request1: " + result1);
+//Console.WriteLine();
 
-Console.WriteLine("Authenticating request2:");
-bool result2 = tokenHandler.Authenticate(request2);
-Console.WriteLine("Authentication result for request2: " + result2);
-Console.WriteLine();
+//Console.WriteLine("Authenticating request2:");
+//bool result2 = tokenHandler.Authenticate(request2);
+//Console.WriteLine("Authentication result for request2: " + result2);
+//Console.WriteLine();
 
-Console.WriteLine("Authenticating request3:");
-bool result3 = tokenHandler.Authenticate(request3);
-Console.WriteLine("Authentication result for request3: " + result3);
+//Console.WriteLine("Authenticating request3:");
+//bool result3 = tokenHandler.Authenticate(request3);
+//Console.WriteLine("Authentication result for request3: " + result3);
+#endregion
+
+#region Command
+using DesignPatternsGoF.Behavioral.Command;
+
+var emailService = new EmailService();
+var smsService = new SMSService();
+
+var emailCommand = new EmailCommand(emailService, "exemplo@email.com", "Olá, este é um e-mail de exemplo.");
+var smsCommand = new SMSCommand(smsService, "+123456789", "Olá, este é um SMS de exemplo.");
+
+var messageSender = new MessageSender();
+messageSender.AddCommand(emailCommand);
+messageSender.AddCommand(smsCommand);
+
+messageSender.SendMessages();  // Isso envia e-mails e SMSs
 #endregion
 
 #endregion Behavioral Patterns

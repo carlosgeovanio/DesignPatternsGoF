@@ -1,6 +1,6 @@
 ﻿using DesignPatternsGoF.Creational.Singleton;
 
-namespace DesignPatternsGoF.Tests.Behavioral
+namespace DesignPatternsGoF.Tests.Creational
 {
     [TestClass]
     public class SingletonTests
